@@ -129,7 +129,7 @@ client.on('message', async (channel, tags, message, self) => {
         const clima = message.toLowerCase().match(/^!temperatura (.*)/mi);
         if (clima) {
             const params = {
-                access_key: '6fbcc85784df36403b4f8b86397ab4ea',
+                access_key: process.env.ACCESS_KEY,
                 query: clima[1],
                 units: 'm'
             }
